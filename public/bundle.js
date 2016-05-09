@@ -56,13 +56,7 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'container' },
-	      'Is Kronos up yet?',
-	      React.createElement(No, null),
-	      React.createElement(
-	        'a',
-	        { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
-	        'Join IRC for the quickest updates.'
-	      )
+	      React.createElement(No, null)
 	    );
 	  }
 	});
@@ -73,12 +67,25 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      { className: 'result' },
-	      React.createElement('img', { src: 'img/down.gif', alt: 'FIRE!!!!!' }),
+	      null,
 	      React.createElement(
-	        'h1',
-	        null,
-	        'No, Kronos is still down. '
+	        'div',
+	        { className: 'result' },
+	        React.createElement('img', { src: 'img/down.gif', alt: 'FIRE!!!!!' }),
+	        React.createElement(
+	          'h1',
+	          null,
+	          'No, Kronos is still down. '
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'irc' },
+	        React.createElement(
+	          'a',
+	          { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
+	          'Join IRC for the quickest updates.'
+	        )
 	      )
 	    );
 	  }
