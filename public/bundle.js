@@ -55,11 +55,30 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'container' },
+	      'Is Kronos up yet?',
+	      React.createElement(No, null),
+	      React.createElement(
+	        'a',
+	        { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
+	        'Join IRC for the quickest updates.'
+	      )
+	    );
+	  }
+	});
+
+	var No = React.createClass({
+	  displayName: 'No',
+
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'result' },
+	      React.createElement('img', { src: 'img/down.gif', alt: 'FIRE!!!!!' }),
 	      React.createElement(
 	        'h1',
 	        null,
-	        'Hello World'
+	        'No, Kronos is still down. '
 	      )
 	    );
 	  }
