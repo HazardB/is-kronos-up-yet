@@ -97,6 +97,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
+	      React.createElement('img', { src: 'img/latestupdate.png', alt: 'NEWS!!!' }),
 	      React.createElement(
 	        'div',
 	        { className: 'result' },

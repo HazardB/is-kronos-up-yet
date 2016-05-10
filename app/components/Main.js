@@ -30,6 +30,8 @@ var No = React.createClass({
   render: function(){
     return (
       <div>
+        <img src="img/latestupdate.png" alt="NEWS!!!"></img>
+
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
           <h1>No, Kronos is <i>still</i> down. </h1>
