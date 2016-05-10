@@ -4,10 +4,15 @@ var ReactDOM = require('react-dom');
 var Main = React.createClass({
   render: function(){
     return (
-      <div className="container">
-        <No />
-        <div className="irc">
-          <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Submit a "down" or "up" image via IRC »</a>
+      <div>
+        <div className="container">
+          <No />
+          <div className="irc">
+            <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Submit an "down" or "up" image via IRC »</a>
+          </div>
+          <div className="survey">
+            <a href="https://forum.nostalrius.org/viewtopic.php?f=2&t=44103" target="_new_win">Why not fill in the Nostalrius Legacy Servers survey? »</a>
+          </div>
         </div>
       </div>
     )
@@ -34,6 +39,16 @@ var No = React.createClass({
   }
 });
 
+var Disclaimer = React.createClass({
+  render: function(){
+    return (
+      <div className="disclaimer">
+        This website is not endorsed by or affiliated with TwinStar - just a fan project!
+      </div>
+    )
+  }
+});
+
 var Yes = React.createClass({
   getInitialState: function(){
     var availableImages = [ 'feels-good-man.jpg'];
@@ -55,3 +70,4 @@ var Yes = React.createClass({
 });
 
 ReactDOM.render(<Main />, document.getElementById('app'))
+ReactDOM.render(<Disclaimer />, document.getElementById('disclaimer'))
