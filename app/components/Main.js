@@ -8,7 +8,7 @@ var Main = React.createClass({
         <div className="container">
           <No />
           <div className="irc">
-            <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Submit an "down" or "up" image via IRC »</a>
+            <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Submit an "up" or "down" image via IRC »</a>
           </div>
           <div className="survey">
             <a href="https://forum.nostalrius.org/viewtopic.php?f=2&t=44103" target="_new_win">Why not fill in the Nostalrius Legacy Servers survey? »</a>

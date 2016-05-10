@@ -66,7 +66,7 @@
 	          React.createElement(
 	            'a',
 	            { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
-	            'Submit an "down" or "up" image via IRC »'
+	            'Submit an "up" or "down" image via IRC »'
 	          )
 	        ),
 	        React.createElement(
