@@ -112,6 +112,11 @@
 	            'still'
 	          ),
 	          ' down. '
+	        ),
+	        React.createElement(
+	          'p',
+	          null,
+	          '(Last updated 15:41 GMT +1)'
 	        )
 	      )
 	    );
