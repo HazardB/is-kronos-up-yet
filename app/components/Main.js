@@ -16,7 +16,7 @@ var Main = React.createClass({
 
 var No = React.createClass({
   getInitialState: function(){
-    var availableImages = [ 'down.gif', 'fuck.gif', 'sad.gif', 'sp-down.gif', 'drink-swirl.gif', 'dumb-and-dumber.gif', 'homer-monkey.gif', 'the-doctor.gif'];
+    var availableImages = [ 'down.gif', 'fuck.gif', 'sad.gif', 'sp-down.gif', 'drink-swirl.gif', 'dumb-and-dumber.gif', 'homer-monkey.gif', 'the-doctor.gif', 'rare-pepe.jpg'];
     var rand = Math.floor(Math.random() * availableImages.length);
 
     var srcImage = availableImages[rand];
@@ -26,7 +26,7 @@ var No = React.createClass({
     return (
       <div>
         <div className="result">
-          <img src={"img/" + this.state.source} alt="FIRE!!!!!"></img>
+          <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
           <h1>No, Kronos is still down. </h1>
         </div>
       </div>
@@ -35,12 +35,19 @@ var No = React.createClass({
 });
 
 var Yes = React.createClass({
+  getInitialState: function(){
+    var availableImages = [ 'feels-good-man.jpg'];
+    var rand = Math.floor(Math.random() * availableImages.length);
+
+    var srcImage = availableImages[rand];
+    return { source: srcImage };
+  },
   render: function(){
     return (
       <div>
         <div className="result">
-          <img src="img/thumbs-up.gif" alt="We're ALIVE!"></img>
-          <h1>Kronos is up!! </h1>
+          <img src={"img/" + this.state.source} alt="Kronos is UP!"></img>
+          <h1>Kronos is back up and fully operational.</h1>
         </div>
       </div>
     )
