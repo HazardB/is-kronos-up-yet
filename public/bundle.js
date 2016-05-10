@@ -56,13 +56,50 @@
 	    return React.createElement(
 	      'div',
 	      { className: 'container' },
-	      React.createElement(No, null)
+	      React.createElement(No, null),
+	      React.createElement(
+	        'div',
+	        { className: 'irc' },
+	        React.createElement(
+	          'a',
+	          { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
+	          'Join IRC for the quickest updates.'
+	        )
+	      )
 	    );
 	  }
 	});
 
 	var No = React.createClass({
 	  displayName: 'No',
+
+	  getInitialState: function getInitialState() {
+	    var availableImages = ['down.gif', 'fuck.gif', 'sad.gif', 'sp-down.gif'];
+	    var rand = Math.floor(Math.random() * availableImages.length);
+
+	    var srcImage = availableImages[rand];
+	    return { source: srcImage };
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'div',
+	        { className: 'result' },
+	        React.createElement('img', { src: "img/" + this.state.source, alt: 'FIRE!!!!!' }),
+	        React.createElement(
+	          'h1',
+	          null,
+	          'No, Kronos is still down. '
+	        )
+	      )
+	    );
+	  }
+	});
+
+	var Yes = React.createClass({
+	  displayName: 'Yes',
 
 	  render: function render() {
 	    return React.createElement(
@@ -71,20 +108,11 @@
 	      React.createElement(
 	        'div',
 	        { className: 'result' },
-	        React.createElement('img', { src: 'img/down.gif', alt: 'FIRE!!!!!' }),
+	        React.createElement('img', { src: 'img/thumbs-up.gif', alt: 'We\'re ALIVE!' }),
 	        React.createElement(
 	          'h1',
 	          null,
-	          'No, Kronos is still down. '
-	        )
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'irc' },
-	        React.createElement(
-	          'a',
-	          { href: 'http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net', target: '_new_win' },
-	          'Join IRC for the quickest updates.'
+	          'Kronos is up!! '
 	        )
 	      )
 	    );
