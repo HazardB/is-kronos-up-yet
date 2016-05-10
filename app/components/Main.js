@@ -7,7 +7,7 @@ var Main = React.createClass({
       <div className="container">
         <No />
         <div className="irc">
-          <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Join IRC for the quickest updates.</a>
+          <a href="http://chat.mibbit.com/?channel=%23kronos-wow&server=irc.mibbit.net" target="_new_win">Submit a "down" or "up" image via IRC »</a>
         </div>
       </div>
     )
@@ -27,7 +27,7 @@ var No = React.createClass({
       <div>
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
-          <h1>No, Kronos is still down. </h1>
+          <h1>No, Kronos is <i>still</i> down. </h1>
         </div>
       </div>
     )
