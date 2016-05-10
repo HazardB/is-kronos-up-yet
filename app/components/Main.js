@@ -30,12 +30,12 @@ var No = React.createClass({
   render: function(){
     return (
       <div>
-        <img src="img/latestupdate.png" alt="NEWS!!!"></img>
+        NEW! <a href="http://www.kronos-wow.com/2016/05/10/kronos-united/">Read the  latest news post by Chero </a>
 
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
           <h1>No, Kronos is <i>still</i> down. </h1>
-          <p>(Last updated 17:57 GMT +1)</p>
+          <p>(Last updated 18:23 GMT +1)</p>
         </div>
       </div>
     )

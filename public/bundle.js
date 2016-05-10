@@ -97,7 +97,12 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement('img', { src: 'img/latestupdate.png', alt: 'NEWS!!!' }),
+	      'NEW! ',
+	      React.createElement(
+	        'a',
+	        { href: 'http://www.kronos-wow.com/2016/05/10/kronos-united/' },
+	        'Read the  latest news post by Chero '
+	      ),
 	      React.createElement(
 	        'div',
 	        { className: 'result' },
@@ -116,7 +121,7 @@
 	        React.createElement(
 	          'p',
 	          null,
-	          '(Last updated 17:57 GMT +1)'
+	          '(Last updated 18:23 GMT +1)'
 	        )
 	      )
 	    );
