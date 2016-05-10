@@ -116,7 +116,7 @@
 	        React.createElement(
 	          'p',
 	          null,
-	          '(Last updated 15:41 GMT +1)'
+	          '(Last updated 17:57 GMT +1)'
 	        )
 	      )
 	    );

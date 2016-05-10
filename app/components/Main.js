@@ -35,7 +35,7 @@ var No = React.createClass({
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
           <h1>No, Kronos is <i>still</i> down. </h1>
-          <p>(Last updated 15:41 GMT +1)</p>
+          <p>(Last updated 17:57 GMT +1)</p>
         </div>
       </div>
     )
