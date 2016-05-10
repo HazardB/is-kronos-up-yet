@@ -42,8 +42,10 @@ var No = React.createClass({
 var Disclaimer = React.createClass({
   render: function(){
     return (
-      <div className="disclaimer">
-        This website is not endorsed by or affiliated with TwinStar - just a fan project!
+      <div>
+        <div className="disclaimer">
+          This website is not endorsed by or affiliated with TwinStar - just a fan project!
+        </div>
       </div>
     )
   }

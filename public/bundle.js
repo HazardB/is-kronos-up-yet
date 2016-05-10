@@ -123,8 +123,12 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      { className: 'disclaimer' },
-	      'This website is not endorsed by or affiliated with TwinStar - just a fan project!'
+	      null,
+	      React.createElement(
+	        'div',
+	        { className: 'disclaimer' },
+	        'This website is not endorsed by or affiliated with TwinStar - just a fan project!'
+	      )
 	    );
 	  }
 	});
