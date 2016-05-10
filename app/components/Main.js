@@ -16,7 +16,7 @@ var Main = React.createClass({
 
 var No = React.createClass({
   getInitialState: function(){
-    var availableImages = [ 'down.gif', 'fuck.gif', 'sad.gif', 'sp-down.gif', 'drink-swirl.gif', 'dumb-and-dumber.gif', 'homer-monkey.gif'];
+    var availableImages = [ 'down.gif', 'fuck.gif', 'sad.gif', 'sp-down.gif', 'drink-swirl.gif', 'dumb-and-dumber.gif', 'homer-monkey.gif', 'the-doctor.gif'];
     var rand = Math.floor(Math.random() * availableImages.length);
 
     var srcImage = availableImages[rand];
