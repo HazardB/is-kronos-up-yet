@@ -30,7 +30,8 @@ var No = React.createClass({
   render: function(){
     return (
       <div>
-        NEW! <a href="http://www.kronos-wow.com/2016/05/10/kronos-united/">Read the  latest news post by Chero </a>
+        <p><i>"The servers are expected to be off/down until Sunday or Monday."</i> - Chero, Lead Developer</p>
+        <strong>NEW!</strong> <a href="http://www.kronos-wow.com/2016/05/10/kronos-united/">Read the full news post</a>
 
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>

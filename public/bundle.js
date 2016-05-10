@@ -97,11 +97,26 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      'NEW! ',
+	      React.createElement(
+	        'p',
+	        null,
+	        React.createElement(
+	          'i',
+	          null,
+	          '"The servers are expected to be off/down until Sunday or Monday."'
+	        ),
+	        ' - Chero, Lead Developer'
+	      ),
+	      React.createElement(
+	        'strong',
+	        null,
+	        'NEW!'
+	      ),
+	      ' ',
 	      React.createElement(
 	        'a',
 	        { href: 'http://www.kronos-wow.com/2016/05/10/kronos-united/' },
-	        'Read the  latest news post by Chero '
+	        'Read the full news post'
 	      ),
 	      React.createElement(
 	        'div',
