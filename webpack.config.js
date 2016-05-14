@@ -1,8 +1,15 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: "./app/components/Main.js",
   output: {
     filename: "public/bundle.js"
   },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false }
+    })
+  ],
   module: {
     loaders: [
       {

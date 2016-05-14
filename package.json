@@ -4,7 +4,9 @@
   "description": "front-end for the iskronosupyet project",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "express": "^4.13.4",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "uglify-js": "^2.6.2",
     "webpack": "^1.13.0"
   },
   "devDependencies": {
