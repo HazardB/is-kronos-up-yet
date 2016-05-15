@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
-    "start": "node server.js"
+    "start": "npm i && webpack && node server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "compression": "^1.6.1",
     "express": "^4.13.4",
     "react": "^15.0.2",
+    "react-bootstrap": "^0.29.4",
     "react-dom": "^15.0.2",
     "uglify-js": "^2.6.2",
     "webpack": "^1.13.0"
