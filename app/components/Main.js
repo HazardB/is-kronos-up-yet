@@ -30,13 +30,13 @@ var No = React.createClass({
   render: function(){
     return (
       <div>
-        <p><i>"The servers are expected to be off/down until Sunday or Monday."</i> - Chero, Lead Developer</p>
-        <strong>NEW!</strong> <a href="http://www.kronos-wow.com/2016/05/10/kronos-united/">Read the full news post</a>
+        <p><i>"... This ultimately means that our servers should be back online sometime on Tuesday."</i> - Chero, Lead Developer</p>
+        <strong>NEW!</strong> <a href="https://www.facebook.com/TheProjectKronos/posts/1697958277120429">Read the full facebook post</a>
 
         <div className="result">
           <img src={"img/" + this.state.source} alt="Kronos is DOWN!"></img>
           <h1>No, Kronos is <i>still</i> down. </h1>
-          <p>(Last updated 18:23 GMT +1)</p>
+          <p>(Last updated 10:40 GMT +1)</p>
         </div>
       </div>
     )
