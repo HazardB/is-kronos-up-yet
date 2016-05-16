@@ -56,7 +56,7 @@ var ServerStatus = React.createClass({
           var statusLabel = (<Label bsStyle="success">UP</Label>);
         }
         else{
-          var statusLabel = (<td><Label bsStyle="danger">DOWN</Label></td>);
+          var statusLabel = (<Label bsStyle="danger">DOWN</Label>);
         }
 
         var now = moment.utc();
@@ -65,7 +65,7 @@ var ServerStatus = React.createClass({
 
         var seconds = Math.floor((msDiff/1000) % 60) * -1;
         return (
-          <tr>
+          <tr key={status.id}>
           <td>{status.name}</td>
           <td>{statusLabel}</td>
           <td>{seconds} seconds ago...</td>

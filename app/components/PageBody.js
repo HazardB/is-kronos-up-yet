@@ -14,8 +14,8 @@ var PageBody = React.createClass({
   render: function(){
     return (
       <div>
-      <Alert bsStyle="danger">
-          <img src="img/down.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
+      <Alert bsStyle="info">
+          <img src="img/mind-blown.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
 
           <h2 className="text-center">Kronos realms have been moved to new hardware!</h2>
           <p className="text-center">The new realms are being tracked below and will be up between 10AM and 2PM CEST (GMT+2)</p>
