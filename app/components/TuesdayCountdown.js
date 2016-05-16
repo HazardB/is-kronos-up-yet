@@ -39,7 +39,7 @@ var TuesdayCountdown = React.createClass({
           <h3>Countdown</h3>
           <Well>
             <h2>{days}d {hours}h {minutes}m {seconds}s...</h2>
-            <p>Until Tuesday May 18th 8 AM GMT +2</p>
+            <p>Until Tuesday May 17th 8 AM GMT +2</p>
 <small className="text-center"><a href="https://github.com/HazardB/is-kronos-up-yet/wiki/FAQ"><strong>Why this time?</strong></a></small>
           </Well>
 
