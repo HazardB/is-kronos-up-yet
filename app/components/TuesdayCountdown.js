@@ -39,8 +39,8 @@ var TuesdayCountdown = React.createClass({
           <h3>Countdown</h3>
           <Well>
             <h2>{days}d {hours}h {minutes}m {seconds}s...</h2>
-            <p>Until Tuesday May 17th 8 AM GMT +2</p>
-<small className="text-center"><a href="https://github.com/HazardB/is-kronos-up-yet/wiki/FAQ#q-why-is-the-timer-set-to-tuesday-17th-may-at-8am-gmt2"><strong>Why this time?</strong></a></small>
+            <p>Until Tuesday May 17th 2 PM CEST (GMT+2)</p>
+<small className="text-center"><a href="https://github.com/HazardB/is-kronos-up-yet/wiki/FAQ#q-why-is-the-timer-set-to-tuesday-17th-may-at-2pm-cest"><strong>Why this time?</strong></a></small>
           </Well>
 
         </Col>

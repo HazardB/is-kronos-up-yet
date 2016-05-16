@@ -17,8 +17,8 @@ var PageBody = React.createClass({
       <Alert bsStyle="danger">
           <img src="img/down.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
 
-          <h2 className="text-center">Kronos realms are being moved to new hardware</h2>
-          <p className="text-center">The TwinStar team have indicated the early hours of Tuesday May 17th as the time the servers will return.</p>
+          <h2 className="text-center">Kronos realms have been moved to new hardware!</h2>
+          <p className="text-center">The new realms are being tracked below and will be up between 10AM and 2PM CEST (GMT+2)</p>
           <Row>
           <Col xs={4} xsOffset={8}>
           <Button bsStyle="warning" bsSize="xsmall" className="text-center" href="http://www.kronos-wow.com/2016/05/16/maintenance/" target="_blank">Read the announcement</Button>
