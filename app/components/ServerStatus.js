@@ -67,7 +67,6 @@ var ServerStatus = React.createClass({
         return (
           <tr>
           <td>{status.name}</td>
-          <td>{status.host}</td>
           <td>{statusLabel}</td>
           <td>{seconds} seconds ago...</td>
           </tr>
@@ -89,7 +88,6 @@ var ServerStatus = React.createClass({
     <thead>
       <tr>
         <th>Server</th>
-        <th>Host</th>
         <th>Status</th>
         <th>Last checked</th>
       </tr>
