@@ -14,11 +14,11 @@ var PageBody = React.createClass({
   render: function(){
     return (
       <div>
-      <Alert bsStyle="info">
-          <img src="img/mind-blown.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
+      <Alert bsStyle="success">
+          <img src="img/up.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
 
-          <h2 className="text-center">Kronos realms have been moved to new hardware!</h2>
-          <p className="text-center">The new realms are being tracked below and will be up between 10AM and 2PM CEST (GMT+2)</p>
+          <h2 className="text-center">KRONOS IS UP!</h2>
+          <p className="text-center">Long live Kronos. Thanks to all the staff over at TwinStar.</p>
           <Row>
           <Col xs={4} xsOffset={8}>
           <Button bsStyle="warning" bsSize="xsmall" className="text-center" href="http://www.kronos-wow.com/2016/05/16/maintenance/" target="_blank">Read the announcement</Button>
