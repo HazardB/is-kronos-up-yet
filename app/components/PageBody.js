@@ -14,14 +14,14 @@ var PageBody = React.createClass({
   render: function(){
     return (
       <div>
-      <Alert bsStyle="success">
-          <img src="img/mind-blown.gif" alt="Kronos is DOWN!" className="center-block img-responsive"></img>
+      <Alert bsStyle="warning">
+          <img src="img/mind-blown.gif" alt="Kronos is experiencing problems!" className="center-block img-responsive"></img>
 
-          <h2 className="text-center">KRONOS IS UP!</h2>
-          <p className="text-center">Long live Kronos. Thanks to all the staff over at TwinStar.</p>
+          <h2 className="text-center">Kronos is still experiencing some latency issues</h2>
+          <p className="text-center">The server might pop up and down over the next few days. Thanks to TwinStar for the continued effort.</p>
           <Row>
           <Col xs={4} xsOffset={8}>
-          <Button bsStyle="warning" bsSize="xsmall" className="text-center" href="http://www.kronos-wow.com/2016/05/16/maintenance/" target="_blank">Read the announcement</Button>
+          <Button bsStyle="warning" bsSize="xsmall" className="text-center" href="http://www.kronos-wow.com/2016/05/16/maintenance/" target="_blank">Latest announcement</Button>
           </Col>
           </Row>
       </Alert>
