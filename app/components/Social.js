@@ -15,7 +15,6 @@ var Social = React.createClass({
   render: function(){
     return (
       <Row className="show-grid">
-      <TuesdayCountdown start={moment("2016-05-17 12:00:00 +0000", "YYYY-MM-DD HH:mm Z")}/>
         <Col md={6}>
           <h3>More</h3>
           <p><Label bsStyle="success">OFFICIAL:</Label></p>

@@ -97,6 +97,9 @@ var ServerStatus = React.createClass({
     </tbody>
   </Table>
   <Row>
+    <Col xs={6} >
+      <small>Servers under heavy load may report as "down".</small>
+    </Col>
     <Col xs={2} xsOffset={10}>
       <small><a href="https://github.com/HazardB/is-kronos-up-yet/wiki/FAQ#q-how-does-the-automated-server-status-work" target="_blank">Learn how this works</a></small>
     </Col>
