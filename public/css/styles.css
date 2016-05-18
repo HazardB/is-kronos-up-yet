@@ -32,3 +32,7 @@ body {
 img {
   max-height:250px;
 }
+
+.main-image{
+  cursor: pointer; 
+}
