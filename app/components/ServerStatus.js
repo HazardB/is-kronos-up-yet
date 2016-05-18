@@ -81,7 +81,7 @@ var ServerStatus = React.createClass({
   },
   handleTracked: function(event){
     var serverId = event.target.name;
-    var value = event.target.value == 'on';
+    var value = event.target.checked;
 
     var newStatuses = this.state.latestStatus.map(function(oldStatus){
       var updated = oldStatus;
