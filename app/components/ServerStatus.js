@@ -54,10 +54,10 @@ var ServerStatus = React.createClass({
           for(var j = 0, len = newStatuses.length; j < len; j++){
             var previous = this.state.latestStatus[i];
             var next = newStatuses[j];
-            if(previous.tracked)
+            if(previous.id == next.id && previous.tracked)
             {
-              next.tracked = true;
-              if(previous.id == next.id && previous.up != next.up){
+              newStatuses[j].tracked = true;
+              if(previous.up != next.up){
                 if(next.up){
                   NotificationManager.success('Server up', next.name + ' is now responding.');
                 }
