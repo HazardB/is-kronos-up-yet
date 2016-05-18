@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactBootstrap = require('react-bootstrap');
+var GoogleAd = require('react-google-ad');
 var moment = require('moment');
 
 var TuesdayCountdown = require('./TuesdayCountdown')
@@ -32,6 +33,9 @@ var Social = React.createClass({
           <Button block href="http://www.reddit.com/r/kronos2wow" target="_blank">
             /r/Kronos2WoW subreddit
           </Button>
+        </Col>
+        <Col md={6}>
+          <GoogleAd client="" slot="" format="" />
         </Col>
       </Row>
     )
