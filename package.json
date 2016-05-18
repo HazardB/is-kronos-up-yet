@@ -32,9 +32,11 @@
     "express": "^4.13.4",
     "moment": "^2.13.0",
     "react": "^15.0.2",
+    "react-addons-css-transition-group": "^15.0.2",
     "react-bootstrap": "^0.29.4",
     "react-dom": "^15.0.2",
     "react-google-ad": "^1.0.2",
+    "react-notifications": "^1.2.0",
     "redux": "^3.5.2",
     "uglify-js": "^2.6.2",
     "webpack": "^1.13.0"

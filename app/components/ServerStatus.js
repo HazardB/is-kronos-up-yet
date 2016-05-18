@@ -2,6 +2,9 @@ var React = require('react');
 var ReactBootstrap = require('react-bootstrap');
 var moment = require('moment');
 
+var reactNotifications = require('react-notifications');
+var NotificationManager = reactNotifications.NotificationManager;
+
 var API = require('../utils/api');
 
 var Button  = ReactBootstrap.Button,
@@ -55,7 +58,13 @@ var ServerStatus = React.createClass({
             {
               next.tracked = true;
               if(previous.id == next.id && previous.up != next.up){
-                console.log(next.name + " went " + next.up);
+                if(next.up){
+                  NotificationManager.success('Server up', next.name + ' is now responding.');
+                }
+                else {
+                  NotificationManager.error('Server down', next.name + ' is no longer responding to our requests.');
+                }
+                document.getElementById('notify').play();
                 continue;
               }
             }
