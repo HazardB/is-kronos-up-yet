@@ -5,11 +5,7 @@ module.exports = {
   output: {
     filename: "public/bundle.js"
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false }
-    })
-  ],
+
   module: {
     loaders: [
       {

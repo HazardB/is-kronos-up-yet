@@ -27,25 +27,66 @@ var ServerStatus = React.createClass({
   componentWillUnmount: function(){
     clearInterval(this.timer);
   },
+  onStatusRetrieved: function(response){
+
+  },
   tick: function(){
     API.retrieveStatus()
     .then(function(response){
       var statusResponse = response.data;
-      var status = this.state.servers.map(function(server) {
+      var newStatuses = this.state.servers.map(function(server) {
         var serverId = server.Id;
 
         for(var i = 0, len = statusResponse.length; i < len; i++){
           if(statusResponse[i].Id == serverId){
-            return { id: serverId, name: server.Name, host: server.IP, lastUpdated: statusResponse[i].LastUpdated, up: statusResponse[i].Up };
+            return { id: serverId, name: server.Name, host: server.IP, lastUpdated: statusResponse[i].LastUpdated, up: statusResponse[i].Up, tracked: false };
           }
         }
       });
 
+      // Diff the previous statuses to understand whether a server has gone up or down
+      if(this.state.latestStatus != null)
+      {
+        for(var i = 0, len = this.state.latestStatus.length; i < len; i++){
+          for(var j = 0, len = newStatuses.length; j < len; j++){
+            var previous = this.state.latestStatus[i];
+            var next = newStatuses[j];
+            if(previous.tracked)
+            {
+              next.tracked = true;
+              if(previous.id == next.id && previous.up != next.up){
+                console.log(next.name + " went " + next.up);
+                continue;
+              }
+            }
+          }
+        }
+      }
+
+
       this.setState({
         servers: this.state.servers,
-        latestStatus: status,
+        latestStatus: newStatuses,
       });
     }.bind(this));
+  },
+  handleTracked: function(event){
+    var serverId = event.target.name;
+    var value = event.target.value == 'on';
+
+    var newStatuses = this.state.latestStatus.map(function(oldStatus){
+      var updated = oldStatus;
+      if(serverId == oldStatus.id){
+        updated.tracked = value;
+        return updated;
+      }
+      return oldStatus;
+    });
+
+    this.setState({
+      servers: this.state.servers,
+      latestStatus: newStatuses,
+    });
   },
   render: function(){
     var hasStatus = this.state != null && this.state.latestStatus != null;
@@ -69,8 +110,9 @@ var ServerStatus = React.createClass({
           <td>{status.name}</td>
           <td>{statusLabel}</td>
           <td>{seconds} seconds ago...</td>
+          <td><Checkbox name={status.id} checked={status.tracked} onChange={this.handleTracked}/></td>
           </tr>
-        )});
+        )}.bind(this));
     }
     else {
       var rows = (<tr><td colSpan="5">Loading data...</td></tr>);
@@ -90,6 +132,7 @@ var ServerStatus = React.createClass({
         <th>Server</th>
         <th>Status</th>
         <th>Last checked</th>
+        <th>Track</th>
       </tr>
     </thead>
     <tbody>
